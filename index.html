@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Motelik Za Grosik w Wałczu - komfortowy nocleg przy drodze krajowej nr 10. Restauracja, cafe & drink bar, parkingi dla samochodów. Organizacja imprez okolicznościowych.">
+    <meta name="keywords" content="motel Wałcz, nocleg Wałcz, dk10, droga krajowa 10, restauracja Wałcz, wesela Wałcz, parking">
+    <meta name="author" content="Przemysław Żarnecki">
+    <meta property="og:title" content="Motelik Za Grosik - Wałcz | Nocleg, Restauracja, Cafe & Drink Bar">
+    <meta property="og:description" content="Komfortowy motel przy DK10 w Wałczu. Restauracja, cafe & drink bar, organizacja imprez okolicznościowych.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://motelikzagrosik.com.pl">
+    <title>Motelik Za Grosik - Wałcz | Nocleg przy DK10</title>
+    <meta name="theme-color" content="#8B4513">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://motelikzagrosik.com.pl/">
+    <link rel="alternate" hreflang="pl-PL" href="https://motelikzagrosik.com.pl/">
+    <meta property="og:image" content="https://motelikzagrosik.com.pl/images/dsc-2053-2000x1333.jpg">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Motelik Za Grosik">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://motelikzagrosik.com.pl/">
+    <meta property="twitter:title" content="Motelik Za Grosik - Wałcz | Nocleg, Restauracja, Cafe & Drink Bar">
+    <meta property="twitter:description" content="Komfortowy motel przy DK10 w Wałczu. Restauracja, cafe & drink bar, organizacja imprez okolicznościowych.">
+    <meta property="twitter:image" content="https://motelikzagrosik.com.pl/images/dsc-2053-2000x1333.jpg">
+    <meta name="geo.region" content="PL-ZP">
+    <meta name="geo.placename" content="Wałcz">
+    <meta name="geo.position" content="53.279;16.471">
+    <meta name="ICBM" content="53.279, 16.471">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Motelik Za Grosik",
+      "url": "https://motelikzagrosik.com.pl/",
+      "image": "https://motelikzagrosik.com.pl/images/dsc-2053-2000x1333.jpg",
+      "description": "Komfortowy motel przy DK10 w Wałczu. Restauracja, cafe & drink bar, organizacja imprez okolicznościowych.",
+      "telephone": "+48672582451",
+      "email": "undro78@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Nowomiejska 35",
+        "addressLocality": "Wałcz",
+        "postalCode": "78-600",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.279,
+        "longitude": 16.471
+      }
+    }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-primary: #8B4513;
+            --color-secondary: #D2691E;
+            --color-accent: #CD853F;
+            --color-dark: #2C1810;
+            --color-light: #FFF8F0;
+            --color-cream: #FAF6F0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--color-dark);
+            background: var(--color-cream);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Crimson Pro', serif;
+        }
+        
+        /* Parallax Hero */
+        .hero-parallax {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-size: cover;
+            background-position: center;
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.7), rgba(44, 24, 16, 0.6));
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Navigation */
+        nav {
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav.scrolled {
+            background: rgba(250, 246, 240, 0.97);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Custom Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+            transform: translate(-50%, -50%);
+        }
+        
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.4);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.7), rgba(210, 105, 30, 0.7));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        .gallery-item .view-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            color: white;
+            font-size: 3rem;
+            z-index: 2;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover .view-icon {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+            animation: zoomIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Decorative Line */
+        .decorative-line {
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            margin: 1.5rem auto;
+            border-radius: 10px;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Contact Form */
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e5e5e5;
+            border-radius: 12px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.1);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--color-cream);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-secondary);
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-primary);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Section Backgrounds */
+        .section-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 69, 19, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(210, 105, 30, 0.03) 0%, transparent 50%);
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(210, 105, 30, 0.05));
+            border-left: 5px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-14 h-14 bg-gradient-to-br from-amber-900 to-orange-800 rounded-2xl flex items-center justify-center shadow-lg">
+                    <i class="fas fa-hotel text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Motelik Za Grosik</h1>
+                    <p class="text-sm text-gray-600">Wałcz • DK10</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#start" class="text-gray-700 hover:text-amber-900 font-medium transition">Start</a>
+                <a href="#o-nas" class="text-gray-700 hover:text-amber-900 font-medium transition">O nas</a>
+                <a href="#pokoje" class="text-gray-700 hover:text-amber-900 font-medium transition">Pokoje</a>
+                <a href="#restauracja" class="text-gray-700 hover:text-amber-900 font-medium transition">Restauracja</a>
+                <a href="#imprezy" class="text-gray-700 hover:text-amber-900 font-medium transition">Imprezy</a>
+                <a href="#galeria" class="text-gray-700 hover:text-amber-900 font-medium transition">Galeria</a>
+                <a href="#kontakt" class="text-gray-700 hover:text-amber-900 font-medium transition">Kontakt</a>
+                <a href="tel:+48672582451" class="btn-primary text-sm py-2.5 px-6">
+                    <i class="fas fa-phone mr-2"></i>Zadzwoń
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-800 text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-white shadow-2xl z-50 p-6">
+        <button id="closeMobileMenu" class="absolute top-6 right-6 text-2xl text-gray-800">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mt-16 space-y-6">
+            <a href="#start" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Start</a>
+            <a href="#o-nas" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">O nas</a>
+            <a href="#pokoje" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Pokoje</a>
+            <a href="#restauracja" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Restauracja</a>
+            <a href="#imprezy" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Imprezy</a>
+            <a href="#galeria" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Galeria</a>
+            <a href="#kontakt" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Kontakt</a>
+            <a href="tel:+48672582451" class="block btn-primary text-center mt-8">
+                <i class="fas fa-phone mr-2"></i>+48 67 258 24 51
+            </a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="start" class="hero-parallax">
+        <div class="hero-bg" id="heroBg" style="background-image: url('images/dsc-2053-2000x1333.jpg');"></div>
+        <div class="relative h-full flex items-center justify-center text-center px-6 z-10">
+            <div class="max-w-5xl animate-fadeInUp">
+                <h2 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                    Motelik<br>Za Grosik
+                </h2>
+                <p class="text-2xl md:text-3xl text-white/95 mb-4 font-light">
+                    Wałcz, droga krajowa nr 10
+                </p>
+                <p class="text-xl md:text-2xl text-white/90 mb-10">
+                    Komfortowy nocleg • Restauracja • Cafe & Drink Bar
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+48672582451" class="btn-primary text-lg">
+                        <i class="fas fa-phone mr-2"></i>+48 67 258 24 51
+                    </a>
+                    <a href="#kontakt" class="btn-primary text-lg bg-white text-amber-900 hover:bg-gray-100">
+                        <i class="fas fa-envelope mr-2"></i>Napisz do nas
+                    </a>
+                </div>
+                <div class="mt-16 animate-float">
+                    <a href="#o-nas" class="text-white text-4xl">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="o-nas" class="py-24 px-6 bg-white section-pattern">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Witamy w Moteliku Za Grosik</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Gościnność, rodzinna atmosfera i solidność usług od lat
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="reveal-left">
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">Nasza historia</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        <strong>Motelik Za Grosik</strong> znajduje się tuż przy drodze krajowej nr 10, 
+                        w malowniczo położonym mieście Wałcz, przy wjeździe na Szczecin.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Dzięki profesjonalnej i sympatycznej obsłudze, Państwa pobyt będzie bardzo udany 
+                        i zachęci do częstych powrotów.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Charakteryzuje nas <strong>gościnność</strong>, <strong>rodzinna atmosfera</strong>, 
+                        <strong>elegancja</strong> oraz <strong>solidność usług</strong>. Dysponujemy komfortowo 
+                        wyposażonymi pokojami, restauracją oraz cafe & drink barem.
+                    </p>
+                </div>
+                
+                <div class="reveal-right">
+                    <img src="images/dsc-2025-2000x1333.jpg" alt="Motelik Za Grosik" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+            
+            <div class="info-box reveal">
+                <h4 class="text-2xl font-bold mb-3 text-amber-900">
+                    <i class="fas fa-check-circle mr-2"></i>Idealne miejsce dla każdego
+                </h4>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Motelik to idealne miejsce <strong>rodzinnego wypoczynku</strong>, krótkich weekendowych pobytów, 
+                    a także <strong>spotkań biznesowych</strong> i wyjazdów służbowych. Nasza oferta skierowana jest 
+                    do osób prywatnych, jak i do instytucji.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="py-24 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl font-bold mb-4">Dlaczego my?</h2>
+                <p class="text-xl text-gray-600">Co wyróżnia Motelik Za Grosik</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card reveal" style="animation-delay: 0.1s">
+                    <div class="feature-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Dwa parkingi</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Parking dla dużych samochodów oraz zamykany parking dla samochodów osobowych. 
+                        Bezpieczeństwo i wygoda naszych gości.
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal" style="animation-delay: 0.2s">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Restauracja na miejscu</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Własna restauracja serwująca domowe posiłki. Śniadania, obiady i kolacje 
+                        w przytulnej atmosferze.
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal" style="animation-delay: 0.3s">
+                    <div class="feature-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Cafe & Drink Bar</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Relaks przy kawie lub drinku w naszym barze. Idealne miejsce na odpoczynek 
+                        po podróży.
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal" style="animation-delay: 0.4s">
+                    <div class="feature-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Komfortowe pokoje</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Komfortowo wyposażone pokoje zapewniające spokojny sen i wypoczynek. 
+                        Czystość i wygoda to nasz priorytet.
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal" style="animation-delay: 0.5s">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Idealna lokalizacja</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Przy drodze krajowej nr 10 w Wałczu. Łatwy dojazd, doskonała lokalizacja 
+                        na trasie między miastami.
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal" style="animation-delay: 0.6s">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Rodzinna atmosfera</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Sympatyczna obsługa i ciepła atmosfera sprawiają, że goście wracają do nas. 
+                        Jesteśmy otwarci na Państwa życzenia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rooms Section -->
+    <section id="pokoje" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl font-bold mb-4">Nasze pokoje</h2>
+                <p class="text-xl text-gray-600">Komfort i przytulność w każdym szczególe</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12 reveal-left">
+                <div>
+                    <img src="images/dsc-2017-2000x1333.jpg" alt="Pokój" class="rounded-2xl shadow-2xl">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">Komfortowe wyposażenie</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Wszystkie nasze pokoje są <strong>komfortowo wyposażone</strong> i zapewniają 
+                        spokojny wypoczynek po długiej podróży.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-amber-900 mr-3 text-xl"></i>
+                            Wygodne łóżka dla komfortowego snu
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-amber-900 mr-3 text-xl"></i>
+                            Łazienki z prysznicem
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-amber-900 mr-3 text-xl"></i>
+                            Telewizor i WiFi
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-amber-900 mr-3 text-xl"></i>
+                            Czystość i porządek
+                        </li>
+                    </ul>
+                    <a href="tel:+48672582451" class="btn-primary">
+                        <i class="fas fa-phone mr-2"></i>Zapytaj o dostępność
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/dsc-2021-2000x1333.jpg" alt="Pokój 1" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img loading="lazy" decoding="async" src="images/dsc-2024-2000x1333.jpg" alt="Pokój 2" class="w-full h-64 object-cover" width="2000" height="1333">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img loading="lazy" decoding="async" src="images/dsc-2015-2000x1333.jpg" alt="Pokój 3" class="w-full h-64 object-cover" width="2000" height="1333">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Restaurant Section -->
+    <section id="restauracja" class="py-24 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal-left">
+                    <div class="decorative-line" style="margin-left: 0;"></div>
+                    <h2 class="text-5xl font-bold mb-6">
+                        Restauracja<br>& Cafe Bar
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Nasza <strong>restauracja</strong> serwuje domowe posiłki w przytulnej atmosferze. 
+                        Dodatkowo zapraszamy do <strong>cafe & drink baru</strong>, gdzie można zrelaksować 
+                        się przy kawie lub drinku.
+                    </p>
+                    <div class="info-box">
+                        <h4 class="font-bold text-xl mb-3 text-amber-900">
+                            <i class="fas fa-utensils mr-2"></i>Menu dostępne na miejscu
+                        </h4>
+                        <p class="text-gray-700">
+                            Serwujemy śniadania, obiady i kolacje. Nasze menu obejmuje klasyczne 
+                            dania kuchni polskiej przygotowane ze świeżych produktów.
+                        </p>
+                    </div>
+                    <a href="tel:+48672582451" class="btn-primary mt-6">
+                        <i class="fas fa-phone mr-2"></i>Zapytaj o menu
+                    </a>
+                </div>
+                
+                <div class="reveal-right">
+                    <img loading="lazy" decoding="async" src="images/dsc-2010-2000x1333.jpg" alt="Restauracja" class="rounded-2xl shadow-2xl mb-6" width="2000" height="1333">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Bar" class="rounded-xl shadow-lg" width="1200" height="800">
+                        <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Cafe" class="rounded-xl shadow-lg" width="1200" height="800">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Events Section -->
+    <section id="imprezy" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl font-bold mb-4">Organizacja imprez</h2>
+                <p class="text-xl text-gray-600">Wesela, bankiety i spotkania biznesowe</p>
+            </div>
+            
+            <div class="mb-12 reveal">
+                <p class="text-lg text-gray-700 text-center max-w-4xl mx-auto mb-8 leading-relaxed">
+                    To doskonałe miejsce do zorganizowania <strong>przyjęcia weselnego</strong>, 
+                    <strong>obiadu rodzinnego</strong>, <strong>wieczorku panieńskiego czy kawalerskiego</strong>, 
+                    <strong>spotkania biznesowego</strong> albo <strong>bankietu</strong>.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="feature-card text-center reveal" style="animation-delay: 0.1s">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-rings-wedding"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Wesela</h3>
+                    <p class="text-gray-600">Organizacja przyjęć weselnych</p>
+                </div>
+                
+                <div class="feature-card text-center reveal" style="animation-delay: 0.2s">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Obiady rodzinne</h3>
+                    <p class="text-gray-600">Spotkania rodzinne i okolicznościowe</p>
+                </div>
+                
+                <div class="feature-card text-center reveal" style="animation-delay: 0.3s">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Wieczory panieńskie</h3>
+                    <p class="text-gray-600">Imprezy panieńskie i kawalerskie</p>
+                </div>
+                
+                <div class="feature-card text-center reveal" style="animation-delay: 0.4s">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Spotkania biznesowe</h3>
+                    <p class="text-gray-600">Bankiety i eventy firmowe</p>
+                </div>
+            </div>
+            
+            <div class="info-box reveal mt-12">
+                <h4 class="font-bold text-2xl mb-3 text-amber-900">
+                    <i class="fas fa-concierge-bell mr-2"></i>Wykwalifikowany personel
+                </h4>
+                <p class="text-lg text-gray-700">
+                    Nasz <strong>wykwalifikowany i dyspozycyjny personel</strong> doradzi Państwu wybór 
+                    sali i menu. Jesteśmy otwarci na wszelkie życzenia naszych Gości.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-24 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl font-bold mb-4">Galeria zdjęć</h2>
+                <p class="text-xl text-gray-600">Zobacz nasze wnętrza</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" data-img="images/dsc-2010-2000x1333.jpg">
+                    <picture>
+                        <source srcset="images/dsc-2010-2000x1333.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2010-2000x1333.jpg" alt="Motelik Za Grosik" width="2000" height="1333">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2015-2000x1333.jpg" style="animation-delay: 0.1s">
+                    <picture>
+                        <source srcset="images/dsc-2015-2000x1333.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2015-2000x1333.jpg" alt="Pokój" width="2000" height="1333">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2017-2000x1333.jpg" style="animation-delay: 0.2s">
+                    <picture>
+                        <source srcset="images/dsc-2017-2000x1333.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2017-2000x1333.jpg" alt="Wnętrze" width="2000" height="1333">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2021-2000x1333.jpg" style="animation-delay: 0.3s">
+                    <picture>
+                        <source srcset="images/dsc-2021-2000x1333.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2021-2000x1333.jpg" alt="Pokój" width="2000" height="1333">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2024-2000x1333.jpg" style="animation-delay: 0.4s">
+                    <picture>
+                        <source srcset="images/dsc-2024-2000x1333.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2024-2000x1333.jpg" alt="Wyposażenie" width="2000" height="1333">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2025-2000x1333.jpg" style="animation-delay: 0.5s">
+                    <picture>
+                        <source srcset="images/dsc-2025-2000x1333.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2025-2000x1333.jpg" alt="Fasada" width="2000" height="1333">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2026-1200x800.jpg" style="animation-delay: 0.6s">
+                    <picture>
+                        <source srcset="images/dsc-2026-1200x800.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Bar" width="1200" height="800">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+                
+                <div class="gallery-item reveal" data-img="images/dsc-2031-1200x800.jpg" style="animation-delay: 0.7s">
+                    <picture>
+                        <source srcset="images/dsc-2031-1200x800.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Restauracja" width="1200" height="800">
+                    </picture>
+                    <i class="fas fa-search-plus view-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl font-bold mb-4">Skontaktuj się z nami</h2>
+                <p class="text-xl text-gray-600">Jesteśmy do Twojej dyspozycji</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="reveal-left">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="feature-icon" style="width: 70px; height: 70px; font-size: 1.5rem;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Telefon</h3>
+                                <a href="tel:+48672582451" class="text-xl text-amber-900 hover:text-amber-700 font-semibold">
+                                    +48 67 258 24 51
+                                </a>
+                                <p class="text-gray-600 mt-1">Zadzwoń i zapytaj o dostępność</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="feature-icon" style="width: 70px; height: 70px; font-size: 1.5rem;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Email</h3>
+                                <a href="mailto:undro78@gmail.com" class="text-xl text-amber-900 hover:text-amber-700 font-semibold">
+                                    undro78@gmail.com
+                                </a>
+                                <p class="text-gray-600 mt-1">Napisz do nas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="feature-icon" style="width: 70px; height: 70px; font-size: 1.5rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Adres</h3>
+                                <p class="text-xl text-gray-700 font-semibold">ul. Nowomiejska 35</p>
+                                <p class="text-xl text-gray-700 font-semibold">78-600 Wałcz</p>
+                                <p class="text-gray-600 mt-1">Droga krajowa nr 10</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="feature-icon" style="width: 70px; height: 70px; font-size: 1.5rem;">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Facebook</h3>
+                                <a href="https://www.facebook.com/Motelikzagrosik/" target="_blank" class="text-xl text-amber-900 hover:text-amber-700 font-semibold">
+                                    facebook.com/Motelikzagrosik
+                                </a>
+                                <p class="text-gray-600 mt-1">Polub naszą stronę</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="reveal-right">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2 text-lg">Imię i nazwisko *</label>
+                            <input type="text" name="name" required class="form-input">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2 text-lg">Email *</label>
+                            <input type="email" name="email" required class="form-input">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2 text-lg">Telefon</label>
+                            <input type="tel" name="phone" class="form-input">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2 text-lg">Wiadomość *</label>
+                            <textarea name="message" required rows="6" class="form-input resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full text-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>Wyślij wiadomość
+                        </button>
+                        
+                        <p id="formMessage" class="text-center text-lg font-semibold hidden"></p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-16 reveal">
+                <div class="rounded-2xl overflow-hidden shadow-2xl" style="height: 450px;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.8!2d16.453766!3d53.282021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDE2JzU1LjMiTiAxNsKwMjcnMTMuNiJF!5e0!3m2!1spl!2spl!4v1234567890" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-amber-900 to-orange-900 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-hotel text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Motelik<br>Za Grosik</h3>
+                    </div>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Komfortowy nocleg przy DK10 w Wałczu. Gościnność i rodzinna atmosfera od lat.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Nawigacja</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#start" class="hover:text-white transition">Start</a></li>
+                        <li><a href="#o-nas" class="hover:text-white transition">O nas</a></li>
+                        <li><a href="#pokoje" class="hover:text-white transition">Pokoje</a></li>
+                        <li><a href="#restauracja" class="hover:text-white transition">Restauracja</a></li>
+                        <li><a href="#imprezy" class="hover:text-white transition">Imprezy</a></li>
+                        <li><a href="#galeria" class="hover:text-white transition">Galeria</a></li>
+                        <li><a href="#kontakt" class="hover:text-white transition">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li><i class="fas fa-phone mr-2"></i>+48 67 258 24 51</li>
+                        <li><i class="fas fa-envelope mr-2"></i>undro78@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>ul. Nowomiejska 35<br><span class="ml-6">78-600 Wałcz</span></li>
+                    </ul>
+                    <div class="mt-4 text-white/60 text-sm">
+                        Wykonanie: <a href="https://www.zarnecki.org/" target="_blank" rel="noopener" class="underline hover:text-white">Przemysław Żarnecki</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Śledź nas</h4>
+                    <a href="https://www.facebook.com/Motelikzagrosik/" target="_blank" class="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+                <p>&copy; 2025 Motelik Za Grosik. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-5xl hover:scale-110 transition z-10">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightboxImg" src="" alt="Gallery Image">
+    </div>
+    
+    <!-- Scripts -->
+    <script>
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.getElementById('heroBg');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+        
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+        
+        // Gallery Lightbox
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-img');
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+            });
+        });
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Escape key to close lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+        
+        // Contact Form with Discord Webhook
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || 'Nie podano',
+                message: formData.get('message')
+            };
+            
+            // DISCORD WEBHOOK URL - WKLEJ TUTAJ SWÓJ WEBHOOK
+            const discordWebhookURL = 'YOUR_DISCORD_WEBHOOK_URL_HERE';
+            
+            // Alternatywnie możesz użyć prostego skryptu PHP na serwerze
+            // const response = await fetch('send-email.php', { ... })
+            
+            const discordPayload = {
+                embeds: [{
+                    title: '📧 Nowa wiadomość z formularza - Motelik Za Grosik',
+                    color: 9127187, // Amber color
+                    fields: [
+                        {
+                            name: '👤 Imię i nazwisko',
+                            value: data.name,
+                            inline: true
+                        },
+                        {
+                            name: '📧 Email',
+                            value: data.email,
+                            inline: true
+                        },
+                        {
+                            name: '📱 Telefon',
+                            value: data.phone,
+                            inline: true
+                        },
+                        {
+                            name: '💬 Wiadomość',
+                            value: data.message
+                        }
+                    ],
+                    timestamp: new Date().toISOString(),
+                    footer: {
+                        text: 'Motelik Za Grosik - Formularz kontaktowy'
+                    }
+                }]
+            };
+            
+            try {
+                // ODKOMENTUJ PONIŻSZY KOD PO WKLEJENIU DISCORD WEBHOOK
+                /*
+                const response = await fetch(discordWebhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(discordPayload)
+                });
+                
+                if (response.ok) {
+                    formMessage.textContent = '✅ Wiadomość wysłana! Odpowiemy wkrótce.';
+                    formMessage.className = 'text-center text-lg font-semibold text-green-600';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+                */
+                
+                // Demo mode - usuń to po skonfigurowaniu webhooka
+                formMessage.textContent = '✅ Wiadomość wysłana! (Demo mode - skonfiguruj Discord webhook lub email)';
+                formMessage.className = 'text-center text-lg font-semibold text-green-600';
+                formMessage.classList.remove('hidden');
+                contactForm.reset();
+                
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+                
+            } catch (error) {
+                formMessage.textContent = '❌ Wystąpił błąd. Spróbuj ponownie lub zadzwoń: +48 67 258 24 51';
+                formMessage.className = 'text-center text-lg font-semibold text-red-600';
+                formMessage.classList.remove('hidden');
+            }
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
