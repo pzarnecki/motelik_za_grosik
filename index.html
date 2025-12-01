@@ -184,6 +184,11 @@
         nav:not(.scrolled) .brand-subtitle { color: #ffffff !important; }
         nav.scrolled .brand-title { color: var(--color-dark) !important; }
         nav.scrolled .brand-subtitle { color: #4b5563 !important; }
+        .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: rgba(44,24,16,0.95); color: #fff; padding: 1rem; display: none; }
+        .cookie-banner.active { display: block; }
+        .privacy-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 50; }
+        .privacy-modal.active { display: flex; }
+        .privacy-content { background: #fff; color: var(--color-dark); max-width: 700px; width: 90%; border-radius: 1rem; padding: 2rem; box-shadow: 0 20px 80px rgba(0,0,0,0.3); }
         
         /* Outline Button */
         .btn-outline {
@@ -1178,6 +1183,29 @@
         </div>
     </footer>
     
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-content">
+            <h3 class="text-2xl font-bold mb-4">Polityka prywatności i RODO</h3>
+            <p class="mb-3">Strona wykorzystuje anonimowe statystyki odwiedzin (Umami), które nie używają ciasteczek i nie zbierają danych osobowych.</p>
+            <p class="mb-3">Dane z formularza kontaktowego przetwarzane są wyłącznie w celu udzielenia odpowiedzi na wiadomość. Administratorem danych jest Motelik Za Grosik, ul. Nowomiejska 35, 78-600 Wałcz.</p>
+            <p class="mb-3">Podstawą przetwarzania jest uzasadniony interes administratora (korespondencja) lub Twoja zgoda. Dane przechowywane są przez okres konieczny do prowadzenia korespondencji.</p>
+            <p class="mb-6">Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i wniesienia skargi do PUODO.</p>
+            <div class="flex justify-end gap-3">
+                <button id="closePrivacy" class="btn-outline">Zamknij</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm md:text-base">Używamy anonimowych statystyk odwiedzin. Akceptując, wyrażasz zgodę na ich działanie. <a href="#" id="openPrivacy" class="underline text-white">Polityka prywatności</a></p>
+            <div class="flex gap-3">
+                <button id="acceptCookies" class="btn-primary">Akceptuję</button>
+                <button id="rejectCookies" class="btn-outline">Odrzuć</button>
+            </div>
+        </div>
+    </div>
+    
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-5xl hover:scale-110 transition z-10">
@@ -1353,6 +1381,19 @@
                 }
             });
         });
+
+        const cookieBanner = document.getElementById('cookieBanner');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const rejectCookies = document.getElementById('rejectCookies');
+        const privacyModal = document.getElementById('privacyModal');
+        const openPrivacy = document.getElementById('openPrivacy');
+        const closePrivacy = document.getElementById('closePrivacy');
+        const consent = localStorage.getItem('cookieConsent');
+        if (!consent) { cookieBanner.classList.add('active'); }
+        if (openPrivacy) { openPrivacy.addEventListener('click', (e) => { e.preventDefault(); privacyModal.classList.add('active'); }); }
+        if (closePrivacy) { closePrivacy.addEventListener('click', () => { privacyModal.classList.remove('active'); }); }
+        if (acceptCookies) { acceptCookies.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); cookieBanner.classList.remove('active'); }); }
+        if (rejectCookies) { rejectCookies.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'rejected'); cookieBanner.classList.remove('active'); }); }
     </script>
     
 </body>
