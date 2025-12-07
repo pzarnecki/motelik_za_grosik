@@ -51,7 +51,7 @@
       "image": "https://motelikzagrosik.com.pl/images/dsc-2053-2000x1333.jpg",
       "description": "Komfortowy motel przy DK10 w Wałczu. Restauracja, cafe & drink bar, organizacja imprez okolicznościowych.",
       "telephone": "+48672582451",
-      "email": "undro78@gmail.com",
+            "email": "motelikzagrosik@gmail.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -192,6 +192,10 @@
         .privacy-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 50; }
         .privacy-modal.active { display: flex; }
         .privacy-content { position: relative; background: #fff; color: var(--color-dark); max-width: 700px; width: 90%; border-radius: 1rem; padding: 2rem; box-shadow: 0 20px 80px rgba(0,0,0,0.3); }
+        .vendor-logo { display: inline-block; width: 30px; height: 30px; vertical-align: middle; background-image: image-set(url('images/favor-logo.webp') type('image/webp'), url('images/favor-logo.png') type('image/png')); background-repeat: no-repeat; background-position: center left; background-size: contain; opacity: 0.95; filter: brightness(1.05) contrast(1.05); }
+        .vendor-logo:hover { opacity: 1; }
+        .execution-row { display: flex; align-items: center; gap: 8px; }
+        @media (max-width: 640px) { .vendor-logo { width: 26px; height: 26px; } }
         
         /* Outline Button */
         .btn-outline {
@@ -738,8 +742,8 @@
             <div class="grid md:grid-cols-2 gap-12 items-center mb-12 reveal-left">
                 <div>
                     <picture>
-                        <source srcset="images/dsc-2017-2000x1333.webp" type="image/webp">
-                        <img src="images/dsc-2017-2000x1333.jpg" alt="Pokój" class="rounded-2xl shadow-2xl" width="2000" height="1333">
+                        <source srcset="images/pokoje-nowe-1.webp" type="image/webp">
+                        <img src="images/pokoje-nowe-1.jpg" alt="Pokój" class="rounded-2xl shadow-2xl" width="640" height="480">
                     </picture>
                 </div>
                 <div>
@@ -825,17 +829,17 @@
                 
                 <div class="reveal-right">
                     <picture>
-                        <source srcset="images/dsc-2010-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2010-2000x1333.jpg" alt="Restauracja" class="rounded-2xl shadow-2xl mb-6" width="2000" height="1333">
+                        <source srcset="images/dsc-2031-1200x800.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Restauracja" class="rounded-2xl shadow-2xl mb-6" width="1200" height="800">
                     </picture>
                     <div class="grid grid-cols-2 gap-4">
                         <picture>
-                            <source srcset="images/dsc-2026-1200x800.webp" type="image/webp">
-                            <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Bar" class="rounded-xl shadow-lg" width="1200" height="800">
+                            <source srcset="images/dsc-2010-2000x1333.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="images/dsc-2010-2000x1333.jpg" alt="Restauracja" class="rounded-xl shadow-lg" width="2000" height="1333">
                         </picture>
                         <picture>
-                            <source srcset="images/dsc-2031-1200x800.webp" type="image/webp">
-                            <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Cafe" class="rounded-xl shadow-lg" width="1200" height="800">
+                            <source srcset="images/dsc-2026-1200x800.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Bar" class="rounded-xl shadow-lg" width="1200" height="800">
                         </picture>
                     </div>
                 </div>
@@ -964,18 +968,18 @@
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
                 
-                <div class="gallery-item reveal" data-img="images/dsc-2026-1200x800.jpg" style="animation-delay: 0.6s">
+                <div class="gallery-item reveal" data-img="images/galeria-nowe-1.jpg" style="animation-delay: 0.6s">
                     <picture>
-                        <source srcset="images/dsc-2026-1200x800.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Bar" width="1200" height="800">
+                        <source srcset="images/galeria-nowe-1.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/galeria-nowe-1.jpg" alt="Nowe zdjęcie galerii" width="640" height="480">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
                 
-                <div class="gallery-item reveal" data-img="images/dsc-2031-1200x800.jpg" style="animation-delay: 0.7s">
+                <div class="gallery-item reveal" data-img="images/galeria-nowe-2.jpg" style="animation-delay: 0.7s">
                     <picture>
-                        <source srcset="images/dsc-2031-1200x800.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Restauracja" width="1200" height="800">
+                        <source srcset="images/galeria-nowe-2.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="images/galeria-nowe-2.jpg" alt="Nowe zdjęcie galerii" width="640" height="480">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -1048,8 +1052,8 @@
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-2">Email</h3>
-                                <a href="mailto:undro78@gmail.com" class="text-xl text-amber-900 hover:text-amber-700 font-semibold break-words max-w-full">
-                                    undro78@gmail.com
+                                <a href="mailto:motelikzagrosik@gmail.com" class="text-xl text-amber-900 hover:text-amber-700 font-semibold break-words max-w-full">
+                                    motelikzagrosik@gmail.com
                                 </a>
                                 <p class="text-gray-600 mt-1">Napisz do nas</p>
                             </div>
@@ -1163,11 +1167,12 @@
                     <h4 class="font-bold text-lg mb-4">Kontakt</h4>
                     <ul class="space-y-2 text-white/80 text-sm">
                         <li><i class="fas fa-phone mr-2"></i>+48 67 258 24 51</li>
-                        <li><i class="fas fa-envelope mr-2"></i>undro78@gmail.com</li>
+                        <li><i class="fas fa-envelope mr-2"></i>motelikzagrosik@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt mr-2"></i>ul. Nowomiejska 35<br><span class="ml-6">78-600 Wałcz</span></li>
                     </ul>
-                    <div class="mt-4 text-white/60 text-sm">
-                        Wykonanie: <a href="https://www.zarnecki.org/" target="_blank" rel="noopener" class="underline hover:text-white">Przemysław Żarnecki</a>
+                    <div class="mt-4 text-white/60 text-sm execution-row">
+                        <a href="https://www.zarnecki.org/" target="_blank" rel="noopener" class="vendor-logo" aria-label="FAVOR"></a>
+                        <span>Wykonanie:</span> <a href="https://www.zarnecki.org/" target="_blank" rel="noopener" class="underline hover:text-white">Przemysław Żarnecki</a>
                     </div>
                 </div>
                 
@@ -1182,7 +1187,11 @@
             
             <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
                 <p>&copy; 2025 Motelik Za Grosik. Wszystkie prawa zastrzeżone.</p>
-                <p class="mt-3"><a href="#" id="footerPrivacyLink" class="underline hover:text-white">Polityka prywatności</a></p>
+                <p class="mt-3">
+                    <a href="#" id="footerPrivacyLink" class="underline hover:text-white">Polityka prywatności</a>
+                    <span class="mx-2">•</span>
+                    <a href="#" id="manageConsentLink" class="underline hover:text-white">Zarządzaj zgodą</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -1205,10 +1214,10 @@
     
     <div id="cookieBanner" class="cookie-banner">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-sm md:text-base">Używamy anonimowych statystyk odwiedzin. Akceptując, wyrażasz zgodę na ich działanie. <a href="#" id="openPrivacy" class="underline text-white">Polityka prywatności</a></p>
+            <p class="text-sm md:text-base">Używamy niezbędnych plików cookie. Anonimowe statystyki uruchamiają się automatycznie i są przetwarzane na naszym serwerze. <a href="#" id="openPrivacy" class="underline text-white">Polityka prywatności</a></p>
             <div class="flex gap-3">
-                <button id="acceptCookies" class="btn-primary">Akceptuję</button>
-                <button id="rejectCookies" class="btn-outline">Odrzuć</button>
+                <button id="acceptEssential" class="btn-outline">Tylko niezbędne</button>
+                <button id="acceptCookies" class="btn-primary">Akceptuj wszystko</button>
             </div>
         </div>
     </div>
@@ -1308,7 +1317,7 @@
             }
         });
         
-        // Contact Form with Discord Webhook
+        // Contact Form
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
         
@@ -1323,51 +1332,19 @@
                 message: formData.get('message')
             };
             
-            
-            
-            const discordPayload = {
-                embeds: [{
-                    title: '📧 Nowa wiadomość z formularza - Motelik Za Grosik',
-                    color: 9127187, // Amber color
-                    fields: [
-                        {
-                            name: '👤 Imię i nazwisko',
-                            value: data.name,
-                            inline: true
-                        },
-                        {
-                            name: '📧 Email',
-                            value: data.email,
-                            inline: true
-                        },
-                        {
-                            name: '📱 Telefon',
-                            value: data.phone,
-                            inline: true
-                        },
-                        {
-                            name: '💬 Wiadomość',
-                            value: data.message
-                        }
-                    ],
-                    timestamp: new Date().toISOString(),
-                    footer: {
-                        text: 'Motelik Za Grosik - Formularz kontaktowy'
-                    }
-                }]
-            };
-            
             try {
-              
-                formMessage.textContent = '✅ Wiadomość wysłana! (Demo mode - skonfiguruj Discord webhook lub email)';
+                const res = await fetch('send-contact.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const json = await res.json();
+                if (!res.ok || !json.success) throw new Error('send_failed');
+                formMessage.textContent = '✅ Wiadomość wysłana! Dziękujemy za kontakt.';
                 formMessage.className = 'text-center text-lg font-semibold text-green-600';
                 formMessage.classList.remove('hidden');
                 contactForm.reset();
-                
-                setTimeout(() => {
-                    formMessage.classList.add('hidden');
-                }, 5000);
-                
+                setTimeout(() => { formMessage.classList.add('hidden'); }, 5000);
             } catch (error) {
                 formMessage.textContent = '❌ Wystąpił błąd. Spróbuj ponownie lub zadzwoń: +48 67 258 24 51';
                 formMessage.className = 'text-center text-lg font-semibold text-red-600';
@@ -1391,10 +1368,11 @@
 
         const cookieBanner = document.getElementById('cookieBanner');
         const acceptCookies = document.getElementById('acceptCookies');
-        const rejectCookies = document.getElementById('rejectCookies');
+        const acceptEssential = document.getElementById('acceptEssential');
         const privacyModal = document.getElementById('privacyModal');
         const openPrivacy = document.getElementById('openPrivacy');
         const footerPrivacyLink = document.getElementById('footerPrivacyLink');
+        const manageConsentLink = document.getElementById('manageConsentLink');
         const closePrivacy = document.getElementById('closePrivacy');
         const closePrivacyX = document.getElementById('closePrivacyX');
         const consent = localStorage.getItem('cookieConsent');
@@ -1403,8 +1381,9 @@
         if (footerPrivacyLink) { footerPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); privacyModal.classList.add('active'); }); }
         if (closePrivacy) { closePrivacy.addEventListener('click', () => { privacyModal.classList.remove('active'); }); }
         if (closePrivacyX) { closePrivacyX.addEventListener('click', () => { privacyModal.classList.remove('active'); }); }
-        if (acceptCookies) { acceptCookies.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); cookieBanner.classList.remove('active'); }); }
-        if (rejectCookies) { rejectCookies.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'rejected'); cookieBanner.classList.remove('active'); }); }
+        if (acceptCookies) { acceptCookies.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'all'); cookieBanner.classList.remove('active'); }); }
+        if (acceptEssential) { acceptEssential.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'essential'); cookieBanner.classList.remove('active'); }); }
+        if (manageConsentLink) { manageConsentLink.addEventListener('click', (e) => { e.preventDefault(); cookieBanner.classList.add('active'); }); }
     </script>
     
 </body>
