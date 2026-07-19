@@ -38,6 +38,9 @@
     <link rel="canonical" href="https://motelikzagrosik.com.pl/">
     <link rel="alternate" hreflang="pl-PL" href="https://motelikzagrosik.com.pl/">
     <meta property="og:image" content="https://motelikzagrosik.com.pl/images/dsc-2053-2000x1333.jpg">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="1333">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:locale" content="pl_PL">
     <meta property="og:site_name" content="Motelik Za Grosik">
     <meta property="twitter:card" content="summary_large_image">
@@ -68,13 +71,17 @@
     {
       "@context": "https://schema.org",
       "@type": "LodgingBusiness",
+      "@id": "https://motelikzagrosik.com.pl/#lodging",
       "name": "Motelik Za Grosik",
       "url": "https://motelikzagrosik.com.pl/",
       "image": "https://motelikzagrosik.com.pl/images/dsc-2053-2000x1333.jpg",
-      "description": "Komfortowy motel przy DK10 w Wałczu. Restauracja, cafe & drink bar, organizacja imprez okolicznościowych.",
+      "description": "Komfortowy motel przy drodze krajowej DK10 w Wałczu na trasie Szczecin–Bydgoszcz. Restauracja, cafe & drink bar, parking dla TIR, organizacja wesel i imprez okolicznościowych.",
       "telephone": "+48672582451",
-            "email": "motelikzagrosik@gmail.com",
+      "email": "motelikzagrosik@gmail.com",
       "priceRange": "$$",
+      "checkinTime": "14:00",
+      "checkoutTime": "11:00",
+      "numberOfRooms": 10,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "ul. Nowomiejska 35",
@@ -84,9 +91,67 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 53.279,
-        "longitude": 16.471
-      }
+        "latitude": 53.2820,
+        "longitude": 16.4538
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking bezpłatny", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking dla ciężarówek i TIR", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Restauracja", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Cafe & Drink Bar", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Sala eventowa", "value": true }
+      ],
+      "hasMap": "https://maps.google.com/?q=Motelik+Za+Grosik+Nowomiejska+35+Walcz"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy Motelik Za Grosik ma parking dla TIR-ów i ciężarówek?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, dysponujemy przestronnym parkingiem dla samochodów ciężarowych i TIR-ów oraz osobnym zamykanym parkingiem dla samochodów osobowych. Bezpłatny dla wszystkich gości."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O której godzinie jest zameldowanie i wymeldowanie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zameldowanie od godziny 14:00, wymeldowanie do godziny 11:00. W miarę możliwości możliwe wcześniejsze zameldowanie lub późniejsze wymeldowanie — prosimy o kontakt telefoniczny."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy można zorganizować wesele lub bankiet w Moteliku Za Grosik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, organizujemy wesela, bankiety, obiady rodzinne, wieczory panieńskie i kawalerskie oraz spotkania biznesowe. Nasz wykwalifikowany personel doradzi w wyborze sali i menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdzie dokładnie znajduje się Motelik Za Grosik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Motelik Za Grosik znajduje się przy ul. Nowomiejska 35, 78-600 Wałcz, bezpośrednio przy drodze krajowej nr 10 (DK10) na trasie Szczecin–Bydgoszcz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy restauracja jest otwarta dla gości spoza motelu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, restauracja jest otwarta zarówno dla gości hotelowych jak i dla wszystkich odwiedzających. Serwujemy śniadania, obiady i kolacje z kuchni polskiej."
+          }
+        }
+      ]
     }
     </script>
     
@@ -547,7 +612,7 @@
                     <i class="fas fa-hotel text-white text-2xl"></i>
                 </div>
                 <div>
-                    <h1 class="brand-title text-2xl font-bold text-gray-800">Motelik Za Grosik</h1>
+                    <span class="brand-title text-2xl font-bold text-gray-800">Motelik Za Grosik</span>
                     <p class="brand-subtitle text-sm text-gray-600">Wałcz • DK10</p>
                 </div>
             </div>
@@ -560,6 +625,7 @@
                 <a href="#restauracja" class="text-gray-700 hover:text-amber-900 font-medium transition">Restauracja</a>
                 <a href="#imprezy" class="text-gray-700 hover:text-amber-900 font-medium transition">Imprezy</a>
                 <a href="#galeria" class="text-gray-700 hover:text-amber-900 font-medium transition">Galeria</a>
+                <a href="#faq" class="text-gray-700 hover:text-amber-900 font-medium transition">FAQ</a>
                 <a href="#kontakt" class="text-gray-700 hover:text-amber-900 font-medium transition">Kontakt</a>
                 <a href="tel:+48672582451" class="btn-primary text-sm py-2.5 px-6">
                     <i class="fas fa-phone mr-2"></i>Zadzwoń
@@ -585,6 +651,7 @@
             <a href="#restauracja" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Restauracja</a>
             <a href="#imprezy" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Imprezy</a>
             <a href="#galeria" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Galeria</a>
+            <a href="#faq" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">FAQ</a>
             <a href="#kontakt" class="block text-gray-700 hover:text-amber-900 font-medium transition text-lg">Kontakt</a>
             <a href="tel:+48672582451" class="block btn-primary text-center mt-8">
                 <i class="fas fa-phone mr-2"></i>+48 67 258 24 51
@@ -638,8 +705,8 @@
                 <div class="reveal-left">
                     <h3 class="text-3xl font-bold mb-6 gradient-text">Nasza historia</h3>
                     <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                        <strong>Motelik Za Grosik</strong> znajduje się tuż przy drodze krajowej nr 10, 
-                        w malowniczo położonym mieście Wałcz, przy wjeździe na Szczecin.
+                        <strong>Motelik Za Grosik</strong> znajduje się tuż przy drodze krajowej nr 10 (DK10),
+                        w Wałczu, na trasie <strong>Szczecin–Bydgoszcz</strong>, przy wjeździe od strony Piły.
                     </p>
                     <p class="text-lg text-gray-700 mb-4 leading-relaxed">
                         Dzięki profesjonalnej i sympatycznej obsłudze, Państwa pobyt będzie bardzo udany 
@@ -665,9 +732,9 @@
                     <i class="fas fa-check-circle mr-2"></i>Idealne miejsce dla każdego
                 </h4>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Motelik to idealne miejsce <strong>rodzinnego wypoczynku</strong>, krótkich weekendowych pobytów, 
-                    a także <strong>spotkań biznesowych</strong> i wyjazdów służbowych. Nasza oferta skierowana jest 
-                    do osób prywatnych, jak i do instytucji.
+                    Motelik to idealne miejsce <strong>rodzinnego wypoczynku</strong>, krótkich weekendowych pobytów,
+                    <strong>noclegów tranzytowych</strong> dla kierowców oraz <strong>kwaterunku pracowniczego</strong>.
+                    Nasza oferta skierowana jest do osób prywatnych, jak i do firm i instytucji.
                 </p>
             </div>
         </div>
@@ -689,8 +756,8 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Dwa parkingi</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Parking dla dużych samochodów oraz zamykany parking dla samochodów osobowych. 
-                        Bezpieczeństwo i wygoda naszych gości.
+                        Parking dla <strong>ciężarówek i TIR-ów</strong> oraz zamykany parking dla samochodów osobowych.
+                        Idealne miejsce na nocleg tranzytowy dla kierowców zawodowych.
                     </p>
                 </div>
                 
@@ -733,8 +800,8 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Idealna lokalizacja</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Przy drodze krajowej nr 10 w Wałczu. Łatwy dojazd, doskonała lokalizacja 
-                        na trasie między miastami.
+                        Przy drodze krajowej nr 10 w Wałczu, na trasie <strong>Szczecin–Bydgoszcz</strong>.
+                        Idealne noclegi tranzytowe oraz kwatery pracownicze dla firm.
                     </p>
                 </div>
                 
@@ -765,7 +832,7 @@
                 <div>
                     <picture>
                         <source srcset="images/pokoje-nowe-1.webp" type="image/webp">
-                        <img src="images/pokoje-nowe-1.jpg" alt="Pokój" class="rounded-2xl shadow-2xl" width="640" height="480">
+                        <img src="images/pokoje-nowe-1.jpg" alt="Pokój dwuosobowy — Motelik Za Grosik Wałcz" class="rounded-2xl shadow-2xl" width="640" height="480">
                     </picture>
                 </div>
                 <div>
@@ -802,19 +869,19 @@
                 <div class="rounded-xl overflow-hidden shadow-lg">
                     <picture>
                         <source srcset="images/dsc-2021-2000x1333.webp" type="image/webp">
-                        <img src="images/dsc-2021-2000x1333.jpg" alt="Pokój 1" class="w-full h-64 object-cover" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2021-2000x1333.jpg" alt="Komfortowy pokój hotelowy — nocleg Wałcz DK10" class="w-full h-64 object-cover" width="2000" height="1333">
                     </picture>
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
                     <picture>
                         <source srcset="images/dsc-2024-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2024-2000x1333.jpg" alt="Pokój 2" class="w-full h-64 object-cover" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2024-2000x1333.jpg" alt="Pokój z łazienką — Motelik Za Grosik" class="w-full h-64 object-cover" width="2000" height="1333">
                     </picture>
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
                     <picture>
                         <source srcset="images/dsc-2015-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2015-2000x1333.jpg" alt="Pokój 3" class="w-full h-64 object-cover" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2015-2000x1333.jpg" alt="Wyposażony pokój noclegowy — motel Wałcz" class="w-full h-64 object-cover" width="2000" height="1333">
                     </picture>
                 </div>
             </div>
@@ -852,16 +919,16 @@
                 <div class="reveal-right">
                     <picture>
                         <source srcset="images/dsc-2031-1200x800.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Restauracja" class="rounded-2xl shadow-2xl mb-6" width="1200" height="800">
+                        <img loading="lazy" decoding="async" src="images/dsc-2031-1200x800.jpg" alt="Restauracja Motelik Za Grosik — domowa kuchnia polska Wałcz" class="rounded-2xl shadow-2xl mb-6" width="1200" height="800">
                     </picture>
                     <div class="grid grid-cols-2 gap-4">
                         <picture>
                             <source srcset="images/dsc-2010-2000x1333.webp" type="image/webp">
-                            <img loading="lazy" decoding="async" src="images/dsc-2010-2000x1333.jpg" alt="Restauracja" class="rounded-xl shadow-lg" width="2000" height="1333">
+                            <img loading="lazy" decoding="async" src="images/dsc-2010-2000x1333.jpg" alt="Sala restauracyjna — Motelik Za Grosik Wałcz DK10" class="rounded-xl shadow-lg" width="2000" height="1333">
                         </picture>
                         <picture>
                             <source srcset="images/dsc-2026-1200x800.webp" type="image/webp">
-                            <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Bar" class="rounded-xl shadow-lg" width="1200" height="800">
+                            <img loading="lazy" decoding="async" src="images/dsc-2026-1200x800.jpg" alt="Cafe & Drink Bar — Motelik Za Grosik Wałcz" class="rounded-xl shadow-lg" width="1200" height="800">
                         </picture>
                     </div>
                 </div>
@@ -953,7 +1020,7 @@
                 <div class="gallery-item reveal" data-img="images/dsc-2015-2000x1333.jpg" style="animation-delay: 0.1s">
                     <picture>
                         <source srcset="images/dsc-2015-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2015-2000x1333.jpg" alt="Pokój" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2015-2000x1333.jpg" alt="Pokój hotelowy — Motelik Za Grosik Wałcz" width="2000" height="1333">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -961,7 +1028,7 @@
                 <div class="gallery-item reveal" data-img="images/dsc-2017-2000x1333.jpg" style="animation-delay: 0.2s">
                     <picture>
                         <source srcset="images/dsc-2017-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2017-2000x1333.jpg" alt="Wnętrze" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2017-2000x1333.jpg" alt="Wnętrze motelu przy DK10 w Wałczu" width="2000" height="1333">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -969,7 +1036,7 @@
                 <div class="gallery-item reveal" data-img="images/dsc-2021-2000x1333.jpg" style="animation-delay: 0.3s">
                     <picture>
                         <source srcset="images/dsc-2021-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2021-2000x1333.jpg" alt="Pokój" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2021-2000x1333.jpg" alt="Komfortowy pokój noclegowy — Motelik Za Grosik" width="2000" height="1333">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -977,7 +1044,7 @@
                 <div class="gallery-item reveal" data-img="images/dsc-2024-2000x1333.jpg" style="animation-delay: 0.4s">
                     <picture>
                         <source srcset="images/dsc-2024-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2024-2000x1333.jpg" alt="Wyposażenie" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2024-2000x1333.jpg" alt="Wyposażenie pokoju — nocleg Wałcz droga krajowa 10" width="2000" height="1333">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -985,7 +1052,7 @@
                 <div class="gallery-item reveal" data-img="images/dsc-2025-2000x1333.jpg" style="animation-delay: 0.5s">
                     <picture>
                         <source srcset="images/dsc-2025-2000x1333.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/dsc-2025-2000x1333.jpg" alt="Fasada" width="2000" height="1333">
+                        <img loading="lazy" decoding="async" src="images/dsc-2025-2000x1333.jpg" alt="Fasada Motelik Za Grosik — motel przy DK10 Wałcz" width="2000" height="1333">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -993,7 +1060,7 @@
                 <div class="gallery-item reveal" data-img="images/galeria-nowe-1.jpg" style="animation-delay: 0.6s">
                     <picture>
                         <source srcset="images/galeria-nowe-1.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/galeria-nowe-1.jpg" alt="Nowe zdjęcie galerii" width="640" height="480">
+                        <img loading="lazy" decoding="async" src="images/galeria-nowe-1.jpg" alt="Motelik Za Grosik — widok wnętrza" width="640" height="480">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -1001,7 +1068,7 @@
                 <div class="gallery-item reveal" data-img="images/galeria-nowe-2.jpg" style="animation-delay: 0.7s">
                     <picture>
                         <source srcset="images/galeria-nowe-2.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="images/galeria-nowe-2.jpg" alt="Nowe zdjęcie galerii" width="640" height="480">
+                        <img loading="lazy" decoding="async" src="images/galeria-nowe-2.jpg" alt="Motelik Za Grosik — pokoje i restauracja Wałcz" width="640" height="480">
                     </picture>
                     <i class="fas fa-search-plus view-icon"></i>
                 </div>
@@ -1098,7 +1165,7 @@
                                 <i class="fab fa-facebook-f"></i>
                             </div>
                             <div>
-                                <a href="https://www.facebook.com/profile.php?id=61584035495982&_rdr" target="_blank" rel="noopener noreferrer" class="text-xl text-amber-900 hover:text-amber-700 font-semibold">
+                                <a href="https://www.facebook.com/profile.php?id=61584035495982" target="_blank" rel="noopener noreferrer" class="text-xl text-amber-900 hover:text-amber-700 font-semibold">
                                     Odwiedź profil
                                 </a>
                                 <p class="text-gray-600 mt-1">Polub naszą stronę</p>
@@ -1155,7 +1222,42 @@
         </div>
     </section>
     
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="decorative-line"></div>
+                <h2 class="text-5xl font-bold mb-4">Często zadawane pytania</h2>
+                <p class="text-xl text-gray-600">Odpowiedzi na najpopularniejsze pytania gości</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="feature-card reveal">
+                    <h3 class="text-xl font-bold mb-2 text-amber-900">Czy macie parking dla TIR-ów i ciężarówek?</h3>
+                    <p class="text-gray-700">Tak, dysponujemy przestronnym parkingiem dla samochodów ciężarowych i TIR-ów oraz osobnym zamykanym parkingiem dla samochodów osobowych. Bezpłatny dla wszystkich gości.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3 class="text-xl font-bold mb-2 text-amber-900">O której godzinie jest zameldowanie i wymeldowanie?</h3>
+                    <p class="text-gray-700">Zameldowanie od godziny <strong>14:00</strong>, wymeldowanie do godziny <strong>11:00</strong>. W miarę możliwości możliwe wcześniejsze zameldowanie lub późniejsze wymeldowanie — prosimy o kontakt telefoniczny.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3 class="text-xl font-bold mb-2 text-amber-900">Czy można zorganizować wesele lub bankiet?</h3>
+                    <p class="text-gray-700">Tak, organizujemy wesela, bankiety, obiady rodzinne, wieczory panieńskie i kawalerskie oraz spotkania biznesowe. Nasz wykwalifikowany personel doradzi w wyborze sali i menu. <a href="tel:+48672582451" class="text-amber-900 underline font-semibold">Zadzwoń i zapytaj o szczegóły</a>.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3 class="text-xl font-bold mb-2 text-amber-900">Gdzie dokładnie jesteście?</h3>
+                    <p class="text-gray-700">Motelik Za Grosik znajduje się przy <strong>ul. Nowomiejska 35, 78-600 Wałcz</strong>, bezpośrednio przy drodze krajowej nr 10 (DK10) na trasie Szczecin–Bydgoszcz. Łatwy wjazd zarówno od strony Szczecina jak i Piły.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3 class="text-xl font-bold mb-2 text-amber-900">Czy restauracja jest dostępna dla gości spoza motelu?</h3>
+                    <p class="text-gray-700">Tak, restauracja jest otwarta zarówno dla gości hotelowych jak i dla wszystkich odwiedzających. Serwujemy śniadania, obiady i kolacje z kuchni polskiej, przygotowane ze świeżych produktów.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
+
     <footer class="bg-gradient-to-br from-amber-900 to-orange-900 text-white py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
@@ -1199,7 +1301,7 @@
                 
                 <div>
                     <h4 class="font-bold text-lg mb-4">Śledź nas</h4>
-                    <a href="https://www.facebook.com/profile.php?id=61584035495982&_rdr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition break-words max-w-full">
+                    <a href="https://www.facebook.com/profile.php?id=61584035495982" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition break-words max-w-full">
                         <i class="fab fa-facebook-f"></i>
                         <span>Facebook</span>
                     </a>
@@ -1207,7 +1309,7 @@
             </div>
             
             <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
-                <p>&copy; 2025 Motelik Za Grosik. Wszystkie prawa zastrzeżone.</p>
+                <p>&copy; 2026 Motelik Za Grosik. Wszystkie prawa zastrzeżone.</p>
                 <p class="mt-3">
                     <a href="#" id="footerPrivacyLink" class="underline hover:text-white">Polityka prywatności</a>
                     <span class="mx-2">•</span>
