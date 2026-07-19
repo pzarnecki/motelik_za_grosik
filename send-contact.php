@@ -36,9 +36,11 @@ if (strlen($message) > 2000) {
     exit;
 }
 
+$formSubject = isset($data['subject']) ? htmlspecialchars(strip_tags($data['subject'])) : 'Brak tematu';
+
 $to = 'motelikzagrosik@gmail.com';
-$subject = 'Nowa wiadomość z formularza - Motelik Za Grosik';
-$body = "Imię i nazwisko: {$name}\nEmail: {$email}\nTelefon: {$phone}\n\nWiadomość:\n{$message}";
+$subject = "Formularz WWW [{$formSubject}]: {$name}";
+$body = "Temat: {$formSubject}\nImię i nazwisko: {$name}\nEmail: {$email}\nTelefon: {$phone}\n\nWiadomość:\n{$message}";
 $headers = [];
 $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';

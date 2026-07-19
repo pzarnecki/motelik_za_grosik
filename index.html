@@ -56,8 +56,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine.js (usunięte - nieużywane) -->
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1193,6 +1192,17 @@
                         </div>
                         
                         <div>
+                            <label class="block text-gray-700 font-semibold mb-2 text-lg">Temat *</label>
+                            <select name="subject" required class="form-input bg-white">
+                                <option value="" disabled selected>Wybierz temat...</option>
+                                <option value="Rezerwacja noclegu">Rezerwacja noclegu / Pokoje</option>
+                                <option value="Organizacja wesela / imprezy">Organizacja wesela / imprezy okolicznościowej</option>
+                                <option value="Restauracja">Restauracja</option>
+                                <option value="Inne zapytanie">Inne zapytanie</option>
+                            </select>
+                        </div>
+                        
+                        <div>
                             <label class="block text-gray-700 font-semibold mb-2 text-lg">Wiadomość *</label>
                             <textarea name="message" required rows="6" class="form-input resize-none"></textarea>
                         </div>
@@ -1452,6 +1462,7 @@
                 name: formData.get('name'),
                 email: formData.get('email'),
                 phone: formData.get('phone') || 'Nie podano',
+                subject: formData.get('subject') || 'Brak tematu',
                 message: formData.get('message')
             };
             
